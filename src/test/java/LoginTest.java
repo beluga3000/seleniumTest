@@ -28,7 +28,7 @@ public class LoginTest {
         //Выбор текстбоксов по классу
         List<WebElement> textboxes = driver.findElements(By.className("txt"));
         for (WebElement WE : textboxes) {
-            WE.click();
+            WE.sendKeys("password");
         }
         //Выбор кнопки входа по ID
         WebElement button = driver.findElement(By.id("SubmitCreds"));
@@ -37,6 +37,6 @@ public class LoginTest {
 
     @After
     public void tearDown() {
-        driver.quit();
+        //driver.quit();
     }
 }
